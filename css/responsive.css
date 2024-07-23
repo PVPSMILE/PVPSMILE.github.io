@@ -1,0 +1,198 @@
+@media all and (max-width:1200px) {
+
+	.single-service {
+		width: calc(50% - 20px);
+	}
+
+	.wrapper-whywe {
+		width: 100%;
+	}
+
+	.wrapper-contact>div {
+		width: 50%;
+	}
+}
+
+@media all and (max-width:1000px) {
+
+	.wrapper-contact-header {
+		display: none;
+	}
+
+	#nav {
+		position: absolute;
+		top: 0;
+		left: -320px;
+		height: 100vh;
+		overflow: auto;
+		background-color: var(--color-black);
+		width: 320px;
+		padding: 20px;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		display: block;
+	}
+
+	#closemenu,
+	#openmenu {
+		display: inline-block;
+	}
+
+	#closemenu {
+		float: right;
+	}
+
+	.menu {
+		clear: both;
+		padding-top: 30px;
+	}
+
+	.menu li {
+		float: none;
+		margin-left: 0px;
+		margin-bottom: 20px;
+	}
+
+	.edge {
+		position: static;
+		-webkit-transform: translate(0%, 0%);
+		-ms-transform: translate(0%, 0%);
+		transform: translate(0%, 0%);
+		margin-bottom: 100px;
+	}
+
+	#aboutus {
+		padding-top: 0px;
+	}
+
+	.single-edge {
+		padding: 20px;
+		width: 50%;
+		border-right: none;
+	}
+
+	.single-quarantee {
+		padding: 20px;
+		width: 50%;
+		text-align: center;
+	}
+
+	.bookong-form {
+		width: 100%;
+		padding-right: 0px;
+		margin-bottom: 50px;
+	}
+
+	.booking-working-hours {
+		width: 100%;
+	}
+
+	.single-price {
+		width: 50%;
+	}
+}
+
+@media all and (max-width:770px) {
+    
+	.aboutus-img {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+
+	.aboutus-content {
+		width: 100%;
+		padding-left: 0px;
+	}
+
+	.wrapper-aboutus-img {
+		bottom: 0px;
+		right: 0px;
+	}
+
+	.services-title {
+		width: 100%;
+		padding-right: 0px;
+	}
+
+	.title-content {
+		width: 100%;
+	}
+
+	.single-service {
+		width: calc(100% - 20px);
+	}
+}
+
+@media all and (max-width:550px) {
+
+	.single-edge,
+	.wrapper-skills .single-skills,
+	.single-quarantee,
+	.single-price,
+	.wrapper-input input,
+	.wrapper-contact>div,
+	#contacts .social-link {
+		width: 100%;
+	}
+
+	.wrapper-contact>div {
+		text-align: center;
+	}
+
+	#contacts .social-link {
+		margin-top: 30px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	#contacts .social-link li {
+		margin: 0px 10px;
+	}
+
+	h1 {
+		font-size: 60px;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+	.wrapper-whywe {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media all and (max-width:400px) {
+	
+    .single-service {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+	.single-service img {
+		margin-bottom: 20px;
+	}
+	.aboutus-img > img {
+		display: none;
+	}
+	.wrapper-aboutus-img {
+		position: static;
+		width: 100% !important;
+		max-width: 100%;
+		margin: 0 auto;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+	.wrapper-aboutus-img img {
+		width: 100%;
+	}
+}
