@@ -305,7 +305,18 @@ h2 {
 	width: 90px;
 	max-width: 100%;
 }
-
+.logo-text {
+	display: flex;
+	text-align: center;
+	align-items:center;
+	
+}
+.logo-text p{
+	margin-left: 5px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 32px;
+	color:#F5F5F5;
+}
 .menu li {
 	float: left;
 	margin-left: 20px;
@@ -352,7 +363,10 @@ h2 {
 	align-items: center;
 	margin-right: 10px;
 }
-
+.fa-brands,.fab {
+    font-weight: 400;
+	font-size: 24px
+}
 
 /**************************************
 *
