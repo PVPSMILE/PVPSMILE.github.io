@@ -195,4 +195,11 @@
 	.wrapper-aboutus-img img {
 		width: 100%;
 	}
+	#logo img {
+		width: 56px;
+	}
+	.logo-text p {
+		font-size: 24px;
+	}
+	
 }
