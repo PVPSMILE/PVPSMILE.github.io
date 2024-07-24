@@ -168,6 +168,12 @@
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+	#logo img {
+		width: 80px;
+	}
+	.logo-text p {
+		font-size: 30px;
+	}
 }
 
 @media all and (max-width:400px) {
