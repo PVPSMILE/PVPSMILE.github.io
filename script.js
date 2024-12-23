@@ -85,11 +85,11 @@ function countPeople() {
 }
 
 function calculatePrice() {
-    let price = 5500;
+    let price = 3500;
     let isHoliday = checkIsHoliday()
     // let withAnimals = checkAnimals()
 
-    price = isHoliday ? price+500 : price
+    price = isHoliday ? price+1000 : price
     price = price + countPeople()
     // price = withAnimals ? price+300 : price
 
@@ -172,16 +172,20 @@ function validateForm() {
 function checkIsHoliday() {
     let date = document.getElementById("book-date").value.toString()
     let bookDate = date && date !== '' ? date : Date.now()
+    console.log(bookDate) 
     let currentDate = new Date(bookDate);
     let currentDay = currentDate.getDay(); // Возвращает день недели (0 - воскресенье, 1 - понедельник, ..., 6 - суббота)
 
     let isHoliday
     if (currentDay >= 1 && currentDay <= 4) { // Понедельник - четверг
         isHoliday = false
-    } else { // Пятница - воскресенье
+    }
+    else { // Пятница - воскресенье
         isHoliday = true
     }
-
+    if ((bookDate >= "2024-12-25" && bookDate <= "2024-12-31") || bookDate === "2025-01-01") {
+        isHoliday = true;
+    }
     return isHoliday;
 }
 
