@@ -171,7 +171,6 @@ function validateForm() {
 function checkIsHoliday() {
     let date = document.getElementById("book-date").value.toString()
     let bookDate = date && date !== '' ? date : Date.now()
-    console.log(bookDate) 
     let currentDate = new Date(bookDate);
     let currentDay = currentDate.getDay(); // Возвращает день недели (0 - воскресенье, 1 - понедельник, ..., 6 - суббота)
 
