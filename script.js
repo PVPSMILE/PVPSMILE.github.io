@@ -134,9 +134,8 @@ function validateForm() {
             price: price,
         };
 
-        fetch('https://dwdwdwdwdwd', {
-            method: 'POST',
-            body: JSON.stringify(data)
+        Promise.resolve({ 
+            json: () => Promise.resolve({ success: true }) // Симуляция успешного ответа
         })
             .then(response => {
                 return response.json(); // Обработка ответа как JSON
