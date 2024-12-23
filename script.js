@@ -89,10 +89,9 @@ function calculatePrice() {
     let isHoliday = checkIsHoliday()
     // let withAnimals = checkAnimals()
 
-    price = isHoliday ? price+1000 : price
-    price = price + countPeople()
+    price = price + countPeople() + isHoliday
     // price = withAnimals ? price+300 : price
-
+    
     let el_price = document.getElementById("price")
     el_price.innerHTML = (price+" грн.");
 }
@@ -178,13 +177,14 @@ function checkIsHoliday() {
 
     let isHoliday
     if (currentDay >= 1 && currentDay <= 4) { // Понедельник - четверг
-        isHoliday = false
+        isHoliday = 0
     }
     else { // Пятница - воскресенье
-        isHoliday = true
+        isHoliday = 500
     }
-    if ((bookDate >= "2024-12-25" && bookDate <= "2024-12-31") || (bookDate >= "2025-01-01" && bookDate <= "2024-01-10")) {
-        isHoliday = true;
+    if ((bookDate >= "2024-12-25" && bookDate <= "2024-12-31") || (bookDate >= "2025-01-01" && bookDate <= "2025-01-10")) {
+        console.log('Новогодние праздники');
+        isHoliday = 2000;
     }
     return isHoliday;
 }
