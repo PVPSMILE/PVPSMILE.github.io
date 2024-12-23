@@ -185,19 +185,19 @@ function checkIsHoliday() {
     return isHoliday;
 }
 
-function checkAnimals(){
-    let selectElement = document.getElementById("animals");
-    let selectedValue = selectElement.value;
+// function checkAnimals(){
+//     let selectElement = document.getElementById("animals");
+//     let selectedValue = selectElement.value;
 
-    let withAnimals
-    if (selectedValue === "1" ) {
-        withAnimals = false
-    } else {
-        withAnimals = true
-    }
+//     let withAnimals
+//     if (selectedValue === "1" ) {
+//         withAnimals = false
+//     } else {
+//         withAnimals = true
+//     }
 
-    return withAnimals
-}
+//     return withAnimals
+// }
 
 document.getElementById('book-date').addEventListener('change', function() {
     calculatePrice()
