@@ -183,7 +183,7 @@ function checkIsHoliday() {
     else { // Пятница - воскресенье
         isHoliday = true
     }
-    if ((bookDate >= "2024-12-25" && bookDate <= "2024-12-31") || bookDate === "2025-01-01") {
+    if ((bookDate >= "2024-12-25" && bookDate <= "2024-12-31") || (bookDate >= "2025-01-01" && bookDate <= "2024-01-10")) {
         isHoliday = true;
     }
     return isHoliday;
