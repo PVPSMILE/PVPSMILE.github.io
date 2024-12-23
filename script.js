@@ -72,13 +72,26 @@ function getBookingDates(){
         });
 }
 
+function countPeople() {
+    const basePrice = 0;
+    const additionalPricePerPerson = 1000;
+    const peopleCountElement = document.getElementById("people").value;
+
+    if (peopleCountElement <= 2) {
+        return basePrice;
+    }
+    const totalPrice = basePrice + (peopleCountElement - 2) * additionalPricePerPerson;
+    return totalPrice;
+}
+
 function calculatePrice() {
-    let price = 3500;
+    let price = 5500;
     let isHoliday = checkIsHoliday()
-    let withAnimals = checkAnimals()
+    // let withAnimals = checkAnimals()
 
     price = isHoliday ? price+500 : price
-    price = withAnimals ? price+300 : price
+    price = price + countPeople()
+    // price = withAnimals ? price+300 : price
 
     let el_price = document.getElementById("price")
     el_price.innerHTML = (price+" грн.");
@@ -117,7 +130,8 @@ function validateForm() {
     let surname = document.getElementById("surname").value;
     let phone = document.getElementById("phone").value;
     let dates = document.getElementById("book-date").value;
-    let animals = document.getElementById("animals").value && document.getElementById("animals").value === "2"
+    // let animals = document.getElementById("animals").value && document.getElementById("animals").value === "2"
+    let peopleCount = document.getElementById("people").value
     let comment = document.getElementById("client-comment").value
     let price = document.getElementById("price").textContent.replace(/\D/gi, '')
     if (firstName === "" || surname === "" || phone === "" || dates === "") {
@@ -129,7 +143,8 @@ function validateForm() {
             surname: surname,
             phone: phone,
             dates: dates,
-            animals: animals,
+            // animals: animals,
+            peopleCount: peopleCount,
             comment: comment,
             price: price,
         };
@@ -188,36 +203,9 @@ document.getElementById('book-date').addEventListener('change', function() {
     calculatePrice()
 });
 
-document.getElementById('animals').addEventListener('change', function() {
+document.getElementById('people').addEventListener('change', function() {
     calculatePrice()
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    const peopleCount = document.getElementById("peopleCount");
-    const addPersonBtn = document.getElementById("addPerson");
-    const removePersonBtn = document.getElementById("removePerson");
-  
-    let count = 4; 
-    // updateCount();
-    //
-    // function updateCount() {
-    //   peopleCount.textContent = count;
-    // }
-
-    // addPersonBtn.addEventListener("click", function() {
-    //   if (count < 6) {
-    //     count++;
-        //updateCount();
-    //  }
-    //});
-  
-    // removePersonBtn.addEventListener("click", function() {
-    //   if (count > 1) {
-    //     count--;
-        //updateCount();
-    //   }
-    // });
-  });
 
 
 function clearFormData () {
